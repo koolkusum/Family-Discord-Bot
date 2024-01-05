@@ -1,16 +1,4 @@
-import discord
-from discord.ext import commands
+import bot
 
-intents = discord.Intents.default()
-intents.all()
-
-bot = commands.Bot(command_prefix='\helloworld', intents=intents)
-
-@bot.event
-async def on_ready():
-    print(f'We have logged in as {bot.user.name}')
-
-@bot.command(name='hi')
-async def hi(ctx):
-    await ctx.send('Hi!')
-bot.run('ADD TOKEN')
+if __name__ == '__main__':
+    bot.run_discord_bot()
